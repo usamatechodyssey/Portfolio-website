@@ -7,9 +7,11 @@ export default function About() {
         <div className="container mx-auto px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center space-y-10 md:space-y-0 md:space-x-10">
           {/* Image Section */}
           <div className="w-full md:w-1/2">
-            <img
+            <Image
               src="/aboutimage.webp"
               alt="About Us"
+              height={500}
+              width={600}
               className="rounded-lg shadow-lg object-cover"
             />
           </div>

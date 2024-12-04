@@ -34,28 +34,34 @@ const Portfolio: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <img
-                  src="https://via.placeholder.com/300x200"
+                <Image
+                  src="/"
                   alt="Project 1"
+                  height={60}
+                  width={60}
                   className="rounded-t-lg"
                 />
                 <h3 className="mt-4 text-xl font-semibold">Project 1</h3>
                 <p className="text-gray-400">Description of project 1.</p>
               </div>
               <div className="bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <img
-                  src="https://via.placeholder.com/300x200"
+                <Image
+                  src="/"
                   alt="Project 2"
                   className="rounded-t-lg"
+                  height={60}
+                  width={60}
                 />
                 <h3 className="mt-4 text-xl font-semibold">Project 2</h3>
                 <p className="text-gray-400">Description of project 2.</p>
               </div>
               <div className="bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <img
-                  src="https://via.placeholder.com/300x200"
+                <Image
+                  src="/"
                   alt="Project 3"
                   className="rounded-t-lg"
+                  height={60}
+                  width={60}
                 />
                 <h3 className="mt-4 text-xl font-semibold">Project 3</h3>
                 <p className="text-gray-400">Description of project 3.</p>

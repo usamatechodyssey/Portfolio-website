@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Contact() {
   return (
     <div className="flex items-center justify-center h-screen bg-gradient-to-br from-[#1C1C1C] to-[#333333] text-white p-6 relative overflow-hidden">
