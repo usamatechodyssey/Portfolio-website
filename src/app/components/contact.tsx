@@ -40,7 +40,7 @@ export default function Contact() {
 
           <p className="text-center text-lg mb-12">
             Have a project in mind or just want to say hello? Reach out, and
-            let's start a conversation!
+            let&apos;s start a conversation!
           </p>
 
           <div className="flex flex-col lg:flex-row lg:space-x-8 justify-center items-center">
