@@ -34,11 +34,11 @@ const HomePage = () => {
 
           <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
             <Image
-              src="/image.png" // Image ka path public folder ke andar se
+              src="/papa.png" // Image ka path public folder ke andar se
               alt="Example Image"
               width={500} // Required: width in pixels
               height={300} // Required: height in pixels
-              layout="responsive" // Optional: Automatically adjusts size
+              priority // Optional: Automatically adjusts size
             />
           </div>
         </div>
@@ -68,11 +68,11 @@ const HomePage = () => {
 
           <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
             <Image
-              src="/image2.png" // Image ka path public folder ke andar se
+              src="/ali.png" // Image ka path public folder ke andar se
               alt="Example Image"
               width={500} // Required: width in pixels
               height={300} // Required: height in pixels
-              layout="responsive" // Optional: Automatically adjusts size
+              priority // Optional: Automatically adjusts size
             />
           </div>
         </div>
