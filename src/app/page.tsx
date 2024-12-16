@@ -1,73 +1,93 @@
+import React from "react";
+import Services from "./components/services";
+import Contact from "./components/contact";
+import Skill from "./components/skill";
+import Counter from "./components/counter";
 import Image from "next/image";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
-const HeroSection = () => {
+const HomePage = () => {
   return (
-    <div className="flex items-center justify-center h-screen bg-gradient-to-br from-[#1C1C1C] to-[#333333] text-white p-6 relative overflow-hidden">
-      {/* Background Decorative Circles */}
-      <div className="absolute w-[500px] h-[500px] bg-purple-600 opacity-20 rounded-full top-1/3 left-1/4 transform -translate-y-1/2 blur-3xl"></div>
-      <div className="absolute w-[400px] h-[400px] bg-blue-500 opacity-20 rounded-full bottom-1/4 right-1/4 transform translate-y-1/2 blur-3xl"></div>
+    <div className=" min-h-screen bg-gradient-to-br from-[#1C1C1C] to-[#333333] text-white p-6 ">
+      {/* Header Section */}
 
-      {/* Left Section */}
-      <div className="flex flex-col items-start space-y-4">
-        <h1 className="text-6xl font-extrabold">
-          Explore <span className="text-purple-500">UI</span>.
-        </h1>
+      <div className="flex  justify-center items-center">
+        <div className="flex flex-col  w-full max-w-screen-xl  items-center justify-center pt-[80px] pb-[80px] pl-[16px] pr-[16px]  lg:flex-row gap-10 lg:gap-0 xl:gap-20">
+          <div className=" flex flex-col gap-10 justify-center text-center   lg:text-left">
+            <div className=" flex flex-col gap-7 ">
+              <h3 className="xm:text-[#4F9CF9] w-[288px]    font-sans text-[36px] font-bold leading-[43.57px] tracking-[-0.02em] text-center md:w-[728px]  md:text-[54px] md:leading-[65.35px] lg:w-[500px]  lg:text-[64px] lg:leading-[77.45px] lg:text-left xl:w-[594px]">
+                Unlock the Power of Modern
+                <span className="text-blue-600">Web Design</span>
+              </h3>
+              <p className=" text-gray-300 w-[288px]  font-sans text-[18px] font-normal leading-[30px] tracking-[-0.02em] text-center md:w-[728px] lg:w-[500px] lg:text-left xl:w-[630px]">
+                Project management software that enables your teams to
+                collaborate, plan, analyze, and manage everyday tasks. Build
+                faster, scalable, and beautiful web applications with our
+                cutting-edge solutions.
+              </p>
+            </div>
+            <div>
+              <button className="w-[232px]  h-[70px] rounded-[8px] bg-blue-600 hover:bg-blue-700 text-white font-semibold font-sans lg:w-[219px]  lg:h-[63px] ">
+                Get Started
+              </button>
+            </div>
+          </div>
 
-        <div className="text-md font-semibold text-gray-400 mt-20 flex flex-col space-y-1">
-          <span>BEGINNER</span>
-          <span className="text-purple-500">•</span>
-          <span>PRO DESIGNER</span>
+          <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+            <Image
+              src="/image.png" // Image ka path public folder ke andar se
+              alt="Example Image"
+              width={500} // Required: width in pixels
+              height={300} // Required: height in pixels
+              layout="responsive" // Optional: Automatically adjusts size
+            />
+          </div>
         </div>
       </div>
 
-      {/* Center Image with Overlay */}
-      <div className="relative mx-16 flex-shrink-0 overflow-hidden rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 p-1">
-        <Image
-          src="/image.png"
-          alt="Designer"
-          width={250}
-          height={250}
-          className="relative z-10 object-cover rounded-full"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40 rounded-full"></div>
-      </div>
+      <Counter />
 
-      {/* Right Section */}
-      <div className="flex flex-col space-y-6 max-w-sm animate-fadeIn">
-        <div className="text-right">
-          <p className="text-gray-400 text-sm">Edition</p>
-          <p className="text-4xl font-semibold text-white">2022</p>
-        </div>
-        <h2 className="text-3xl font-bold leading-snug">
-          A Guide for Modern UI Designers
-        </h2>
-        <p className="text-gray-300">
-          Dive into the essentials of UI design with a comprehensive guide made
-          for modern creators. Learn techniques, tips, and start designing with
-          confidence.
-        </p>
-        <div className="flex space-x-4">
-          <button className="px-6 py-2 bg-white bg-opacity-20 text-white font-semibold rounded-lg shadow-lg backdrop-blur-md transition-transform transform hover:scale-105 hover:bg-opacity-30">
-            Get Started
-          </button>
-          <button className="px-6 py-2 border border-gray-500 text-white font-semibold rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:bg-gray-200 hover:text-black">
-            Learn More
-          </button>
+      <div id="about" className="flex  justify-center items-center">
+        <div className="flex flex-col  w-full max-w-screen-xl  items-center justify-center pt-[80px] pb-[80px] pl-[16px] pr-[16px]  lg:flex-row gap-10 lg:gap-0 xl:gap-20">
+          <div className=" flex flex-col gap-10 justify-center text-center   lg:text-left">
+            <div className=" flex flex-col gap-7 ">
+              <h3 className="xm:text-[#4F9CF9] w-[288px]    font-sans text-[36px] font-bold leading-[43.57px] tracking-[-0.02em] text-center md:w-[728px]  md:text-[54px] md:leading-[65.35px] lg:w-[500px]  lg:text-[60px] lg:leading-[77.45px] lg:text-left xl:w-[594px]">
+                About <span className="text-blue-600">Us</span>
+              </h3>
+              <p className=" text-gray-300 w-[288px]  font-sans text-[18px] font-normal leading-[30px] tracking-[-0.02em] text-center md:w-[728px] lg:w-[500px] lg:text-left xl:w-[630px]">
+                We are passionate about building innovative web solutions that
+                help businesses grow and succeed. Our team combines creativity,
+                technology, and expertise to deliver world-class results.
+              </p>
+            </div>
+            <div>
+              <button className="w-[232px]  h-[70px] rounded-[8px] bg-blue-600 hover:bg-blue-700 text-white font-semibold font-sans lg:w-[219px]  lg:h-[63px] ">
+                Get Started
+              </button>
+            </div>
+          </div>
+
+          <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+            <Image
+              src="/image2.png" // Image ka path public folder ke andar se
+              alt="Example Image"
+              width={500} // Required: width in pixels
+              height={300} // Required: height in pixels
+              layout="responsive" // Optional: Automatically adjusts size
+            />
+          </div>
         </div>
       </div>
 
-      {/* Navigation Arrows */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-10 text-gray-400">
-        <span className="cursor-pointer hover:text-white transition-colors">
-          <FaArrowLeft />
-        </span>
-        <span className="cursor-pointer hover:text-white transition-colors">
-          <FaArrowRight />
-        </span>
-      </div>
+      <Skill />
+
+      <Services />
+
+      {/* Call to Action Section */}
+
+      <Contact />
+      {/* Footer Section */}
     </div>
   );
 };
 
-export default HeroSection;
+export default HomePage;

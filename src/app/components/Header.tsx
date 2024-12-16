@@ -1,84 +1,73 @@
 "use client";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { useState } from "react";
 import Link from "next/link";
 
-export default function Navbar() {
-  const [navOpen, setNavOpen] = useState(false);
-  const handleNavToggle = () => setNavOpen(!navOpen);
+import { useState } from "react";
+
+export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="  bg-[#1E1E1E] text-white font-[Montserrat]  h-[91px] w-full mx-auto">
-      <header className="flex items-center  h-[91px] max-w-[1046px]  px-6    mx-auto   ">
-        {/* BrandName Section */}
-        <div className="text-2xl font-bold">
-          <h3>BrandName</h3>
-        </div>
+    <header className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        {/* Brand Logo */}
+        <div className="text-2xl font-bold">YourBrand</div>
 
-        {/* Navigation Links and Right Section */}
-        <div className="flex items-center justify-between w-full md:ml-8">
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6 text-[#8C92AC] font-semibold">
-            <Link href="/" className="hover:text-white">
-              Home
-            </Link>
-            <Link href="/About" className="hover:text-white">
-              About
-            </Link>
-            <Link href="/Services " className="hover:text-white">
-              Services
-            </Link>
-            <Link href="/Portfolio" className="hover:text-white">
-              Portfolio
-            </Link>
-          </nav>
-
-          {/* Login and Join Us */}
-          <div className="hidden md:flex items-center space-x-6 ml-auto">
-            <Link href="/Contact" className="text-[#8C92AC] hover:text-white">
-              Contact
-            </Link>
-            <button className="bg-purple-500 text-white font-semibold px-6 py-2 rounded-md  hover:bg-purple-700">
-              Join Us
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Toggle Icon */}
-        <div className="md:hidden flex items-center">
-          <button onClick={handleNavToggle} className="text-2xl">
-            {navOpen ? <FaTimes /> : <FaBars />}
-          </button>
-        </div>
-      </header>
-
-      {/* Mobile Navigation */}
-      <div
-        className={`md:hidden ${
-          navOpen ? "block" : "hidden"
-        } bg-[#252B42] text-center py-4`}
-      >
-        <nav className="flex flex-col space-y-4 text-[#8C92AC] font-semibold">
-          <Link href="/" className="hover:text-white">
-            Home
+        {/* Navigation Menu for Large Screens */}
+        <nav className="hidden md:flex space-x-6">
+          <Link href="#features" className="hover:text-gray-300">
+            Features
           </Link>
-          <Link href="/About" className="hover:text-white">
+          <Link href="#about" className="hover:text-gray-300">
             About
           </Link>
-          <Link href="/ Services " className="hover:text-white">
-            Services
-          </Link>
-          <Link href="/Portfolio" className="hover:text-white">
-            Portfolio
-          </Link>
-          <Link href="/Contact" className="text-[#8C92AC] hover:text-white">
+          <Link href="#contact" className="hover:text-gray-300">
             Contact
           </Link>
-          <button className="bg-[#23A6F0] text-white font-semibold px-6 py-2 rounded-md mt-4 border border-blue-500 hover:bg-[#2A4BAF]">
-            Join Us
-          </button>
         </nav>
+
+        {/* Toggle Icon for Small Screens */}
+        <button
+          className="md:hidden focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
       </div>
-    </div>
+
+      {/* Responsive Mobile Menu */}
+      <div className={`md:hidden ${isOpen ? "block" : "hidden"} bg-gray-900`}>
+        <Link
+          href="#features"
+          className="block px-4 py-2 text-white hover:bg-gray-700"
+        >
+          Features
+        </Link>
+        <Link
+          href="#about"
+          className="block px-4 py-2 text-white hover:bg-gray-700"
+        >
+          About
+        </Link>
+        <Link
+          href="#contact"
+          className="block px-4 py-2 text-white hover:bg-gray-700"
+        >
+          Contact
+        </Link>
+      </div>
+    </header>
   );
 }
